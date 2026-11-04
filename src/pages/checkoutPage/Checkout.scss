@@ -1,0 +1,218 @@
+.checkout-page {
+  background-color: #fcfcfd;
+  min-height: calc(100vh - 76px);
+
+  /* --- Step Indicator Bar --- */
+  .steps-bar {
+    .step-badge {
+      width: 28px;
+      height: 28px;
+      background-color: #e2e8f0;
+      color: #64748b;
+      transition: all 0.25s ease;
+
+      &.active {
+        background-color: var(--main-color);
+        color: #ffffff;
+      }
+    }
+
+    .step-Connector {
+      width: 45px;
+      height: 2px;
+      background-color: #e2e8f0;
+      transition: background-color 0.25s ease;
+
+      &.active {
+        background-color: var(--main-color);
+      }
+    }
+  }
+
+  /* --- Checkout Cards & Inputs --- */
+  .checkout-card {
+    border-color: #e2e8f0 !important;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+    &.active-step-card {
+      border-color: rgba(53, 37, 205, 0.35) !important;
+      box-shadow: 0 4px 18px rgba(53, 37, 205, 0.05);
+    }
+
+    .checkout-input {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+
+      &:focus {
+        background-color: #ffffff;
+        border-color: var(--main-color);
+      }
+    }
+  }
+
+  /* --- Payment Options --- */
+  .payment-option-box {
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &.selected {
+      border: 2px solid var(--main-color);
+      background-color: #fcfdff;
+    }
+
+    .payment-radio .form-check-input:checked {
+      background-color: var(--main-color);
+      border-color: var(--main-color);
+    }
+  }
+
+  .place-order-btn {
+    min-width: 220px;
+  }
+
+  /* --- Right Summary Panel --- */
+  @media (min-width: 992px) {
+    .summary-sticky {
+      position: sticky;
+      top: 24px;
+    }
+  }
+
+  .order-summary-panel {
+    background-color: #e8eeff;
+    border: 1px solid #dbe4ff;
+
+    .summary-img-box {
+      width: 56px;
+      height: 56px;
+      background-color: #ffffff;
+
+      img {
+        max-height: 46px;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    .summary-item-title {
+      max-width: 150px;
+    }
+
+    .free-text {
+      color: #00714d;
+    }
+
+    .promo-apply-btn {
+      background-color: #dbe4ff;
+      border-color: #94a3b8;
+      color: var(--main-color);
+
+      &:hover {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+        color: #ffffff;
+      }
+    }
+
+    .security-perks-box {
+      background-color: #d1fae5;
+
+      .perk-text {
+        font-size: 0.75rem;
+        color: #065f46;
+        font-weight: 500;
+      }
+    }
+  }
+
+  /* --- Order Confirmed View --- */
+  &.confirmed-view {
+    .success-circle-outer {
+      width: 68px;
+      height: 68px;
+      background-color: #6cf8bb;
+
+      .success-circle-inner {
+        width: 34px;
+        height: 34px;
+        background-color: #00714d;
+      }
+    }
+
+    .delivery-status-card {
+      border-color: #e2e8f0 !important;
+
+      .delivery-date {
+        color: #00714d;
+      }
+
+      .delivery-tracker {
+        .node-circle {
+          width: 32px;
+          height: 32px;
+          background-color: #e8eeff;
+
+          &.active {
+            background-color: var(--main-color);
+          }
+        }
+
+        .node-label {
+          font-size: 0.75rem;
+        }
+
+        .tracker-line {
+          height: 2px;
+          background-color: #e2e8f0;
+          margin-top: -18px;
+
+          &.active-line {
+            background-color: var(--main-color);
+          }
+        }
+      }
+
+      .info-heading {
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
+      }
+    }
+
+    .action-btn {
+      min-width: 190px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .outline-action-btn {
+      color: var(--main-color);
+      border-color: var(--main-color);
+
+      &:hover {
+        background-color: #eff4ff !important;
+        color: var(--main-color);
+      }
+    }
+
+    .support-banner {
+      background-color: #e6fcf5;
+      border: 1px solid #a7f3d0;
+
+      .help-icon-circle {
+        width: 40px;
+        height: 40px;
+        background-color: #6cf8bb;
+      }
+
+      .support-btn {
+        background-color: #006847 !important;
+
+        &:hover {
+          background-color: #005238 !important;
+        }
+      }
+    }
+  }
+}

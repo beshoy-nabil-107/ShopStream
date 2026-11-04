@@ -1,0 +1,197 @@
+.products-page {
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 76px);
+  width: 100%;
+
+  .filter-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: #64748b;
+  }
+
+  /* Desktop sticky sidebar */
+  @media (min-width: 768px) {
+    .sidebar-col {
+      position: sticky;
+      top: 20px;
+      z-index: 10;
+    }
+
+    .products-sidebar {
+      max-height: calc(100vh - 40px);
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 4px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: var(--main-color);
+        
+      }
+    }
+  }
+
+  .products-sidebar {
+    /* Vertical Swiper container */
+    .categories-swiper-container {
+      height: 185px;
+      position: relative;
+
+      .categories-swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .category-slide {
+        height: auto !important;
+      }
+
+      .swiper-scrollbar {
+        background: #f1f5f9;
+        width: 5px !important;
+        right: 0 !important;
+      }
+      .swiper-scrollbar-drag {
+        background: #cbd5e1;
+        border-radius: 10px;
+        &:hover {
+          background: var(--main-color);
+        }
+      }
+    }
+
+    /* Radio button styling */
+    .custom-radio {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.25rem;
+
+      .form-check-input {
+        cursor: pointer;
+        width: 1.1rem;
+        height: 1.1rem;
+        margin-top: 0;
+        border-color: #cbd5e1;
+
+        &:checked {
+          background-color: var(--main-color);
+          border-color: var(--main-color);
+        }
+        &:focus {
+          box-shadow: 0 0 0 0.2rem rgba(53, 37, 205, 0.15);
+        }
+      }
+
+      .form-check-label {
+        cursor: pointer;
+        color: #334155;
+        font-size: 0.92rem;
+        font-weight: 500;
+        padding-left: 0.5rem;
+        transition: color 0.15s ease;
+        user-select: none;
+      }
+
+      &:hover .form-check-label {
+        color: var(--main-color);
+      }
+    }
+
+    /* Price Range Input */
+    .custom-range {
+      &::-webkit-slider-runnable-track {
+        background-color: #e2e8f0;
+        height: 6px;
+        border-radius: 4px;
+      }
+      &::-webkit-slider-thumb {
+        background: var(--main-color);
+        width: 18px;
+        height: 18px;
+        margin-top: -6px;
+        box-shadow: 0 2px 6px rgba(53, 37, 205, 0.3);
+        transition: transform 0.15s ease;
+
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+      &::-moz-range-thumb {
+        background: var(--main-color);
+        border: none;
+      }
+    }
+
+    /* Star Rating */
+    .interactive-rating {
+      .star-icon {
+        cursor: pointer;
+        transition: transform 0.15s ease, color 0.15s ease;
+
+        &:hover {
+          transform: scale(1.15);
+        }
+      }
+    }
+  }
+
+  /* Select Dropdowns */
+  .custom-select {
+    cursor: pointer;
+    font-size: 0.92rem;
+    border-color: #e2e8f0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    &:focus {
+      border-color: var(--main-color);
+      box-shadow: 0 0 0 0.2rem rgba(53, 37, 205, 0.1);
+    }
+  }
+
+  .sort-select {
+    min-width: 170px;
+  }
+
+  /* Pagination Buttons */
+  .pagination-wrapper {
+    flex-wrap: wrap;
+
+    .page-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+
+      &:hover:not(:disabled) {
+        border-color: var(--main-color);
+        color: var(--main-color);
+        background-color: #eff4ff;
+        transform: translateY(-2px);
+      }
+
+      &.active-page {
+        background-color: var(--main-color) !important;
+        border-color: var(--main-color) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(53, 37, 205, 0.25);
+      }
+
+      &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

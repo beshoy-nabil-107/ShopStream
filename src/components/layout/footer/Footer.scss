@@ -1,0 +1,26 @@
+.app-footer {
+  background-color: #f4f6fb;
+  border-color: #e2e8f0 !important;
+
+  .footer-brand {
+    color: var(--main-color) !important;
+  }
+
+  .footer-links {
+    a {
+      transition: color 0.2s ease;
+      &:hover {
+        color: var(--main-color) !important;
+      }
+    }
+  }
+
+  .footer-icons {
+    .icon-wrapper {
+      transition: color 0.2s ease;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+  }
+}

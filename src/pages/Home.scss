@@ -1,0 +1,61 @@
+/* Stay Ahead of the Stream banner */
+.newsletter-banner {
+  background-color: var(--main-color);
+  box-shadow: 0 10px 30px rgba(53, 37, 205, 0.2);
+
+  .banner-desc {
+    max-width: 520px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  /* Decorative dashed circular rays on the right side */
+  .banner-rays {
+    right: -60px;
+    bottom: -100px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+      from 0deg,
+      rgba(255, 255, 255, 0.12) 0deg 12deg,
+      transparent 12deg 24deg
+    );
+    pointer-events: none;
+    z-index: 0;
+
+    @media (max-width: 991px) {
+      opacity: 0.4;
+      right: -100px;
+      bottom: -120px;
+    }
+  }
+
+  /* Input Styling */
+  .newsletter-input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    max-width: 340px;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.15) !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
+    }
+  }
+
+  /* Join Now Button */
+  .join-now-btn {
+    background-color: #006847 !important;
+    color: #ffffff;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+      background-color: #005238 !important;
+      transform: translateY(-1px);
+    }
+  }
+}

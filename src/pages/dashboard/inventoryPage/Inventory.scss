@@ -1,0 +1,359 @@
+.inventory-page {
+  /* Top Add Product Button */
+  .add-product-btn {
+    background-color: #6cf8bb !important;
+    color: #005236 !important;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  /* Search & Filter Toolbar */
+  .inventory-search {
+    background-color: #f1f5f9;
+    max-width: 420px;
+
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+  }
+
+  .toolbar-btn {
+    border-color: #e2e8f0 !important;
+
+    &::after {
+      display: none; // Hides default dropdown arrow icon
+    }
+
+    &:hover {
+      background-color: #f8fafc !important;
+    }
+  }
+
+  .category-dropdown-menu {
+    max-height: 260px;
+    overflow-y: auto;
+
+    .dropdown-item.active {
+      background-color: var(--main-color);
+    }
+  }
+
+  /* Inventory Table */
+  .inventory-table {
+    thead tr {
+      background-color: #f4f6fb;
+    }
+
+    .product-thumb-box {
+      width: 46px;
+      height: 46px;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+
+      img {
+        max-height: 36px;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    .sku-text {
+      font-size: 0.72rem;
+    }
+
+    .category-pill {
+      background-color: #e2e8f8;
+      color: var(--main-color);
+      font-size: 0.68rem;
+      letter-spacing: 0.03em;
+    }
+
+    .stock-dot {
+      width: 8px;
+      height: 8px;
+
+      &.in-stock {
+        background-color: #00714d;
+      }
+
+      &.low-stock {
+        background-color: #b91c1c;
+      }
+
+      &.out-stock {
+        background-color: #94a3b8;
+      }
+    }
+
+    .icon-action-btn {
+      transition: transform 0.15s ease, opacity 0.15s ease;
+
+      &.edit-btn {
+        color: var(--main-color);
+      }
+
+      &.delete-btn {
+        color: #b91c1c;
+      }
+
+      &:hover {
+        opacity: 0.75;
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  /* Pagination Footer */
+  .table-footer {
+    background-color: #f4f6fb;
+
+    .page-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 0.78rem;
+      border-color: #e2e8f0 !important;
+      transition: all 0.2s ease;
+
+      &.active {
+        background-color: var(--main-color) !important;
+        color: #ffffff !important;
+        border-color: var(--main-color) !important;
+      }
+
+      &:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  /* Bottom 3 Stats Cards */
+  .stat-card {
+    background-color: #e8eeff;
+
+    .stat-icon {
+      width: 38px;
+      height: 38px;
+
+      &.purple-box {
+        background-color: var(--main-color);
+      }
+
+      &.green-box {
+        background-color: #6cf8bb;
+      }
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+    }
+
+    .growth-badge {
+      color: #00714d;
+      font-size: 0.78rem;
+    }
+
+    .period-badge {
+      font-size: 0.75rem;
+    }
+
+    .alert-badge {
+      color: #b91c1c;
+      font-size: 0.78rem;
+    }
+  }
+}
+
+/* --- Modal 1: Add New Product --- */
+.add-modal-content {
+  .soft-input {
+    background-color: #f4f6fb;
+    border: 1px solid #e2e8f0;
+
+    &:focus {
+      background-color: #ffffff;
+      border-color: var(--main-color);
+    }
+  }
+
+  .upload-dropzone {
+    background-color: #f4f6fb;
+    border: 1.5px dashed #cbd5e1;
+    min-height: 110px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--main-color);
+      background-color: #eff3fb;
+    }
+
+    .uploaded-thumb-preview {
+      max-height: 85px;
+    }
+  }
+
+  .modal-footer-bar {
+    background-color: #f4f6fb;
+  }
+}
+
+/* --- Modal 2: Edit Product --- */
+.edit-modal-content {
+  .modal-header-bar,
+  .modal-footer-bar {
+    background-color: #f4f6fb;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+  }
+
+  .main-img-preview {
+    height: 190px;
+    background-color: #f8fafc;
+    border: 2px solid var(--main-color);
+
+    img {
+      max-height: 165px;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .sub-img-preview {
+    height: 110px;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+
+    img {
+      max-height: 90px;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .add-img-box {
+    height: 110px;
+    border: 1.5px dashed #cbd5e1;
+    background-color: #fcfcfd;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--main-color);
+      color: var(--main-color) !important;
+      background-color: #f4f6fb;
+    }
+  }
+
+  .publish-status-box {
+    background-color: #eff3fb;
+    border: 1px solid #dbe4ff;
+
+    .publish-switch .form-check-input:checked {
+      background-color: var(--main-color);
+      border-color: var(--main-color);
+    }
+  }
+
+  .edit-input,
+  .edit-input-group {
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+
+    &:focus,
+    &:focus-within {
+      border-color: var(--main-color);
+    }
+  }
+
+  .sync-info-box {
+    background-color: #e6fcf5;
+    border: 1px solid #a7f3d0;
+  }
+
+  .duplicate-btn {
+    border: 1px solid #94a3b8;
+    color: var(--main-color);
+
+    &:hover {
+      background-color: #eff4ff !important;
+      border-color: var(--main-color);
+    }
+  }
+}
+
+.success-alert-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #d1fae5;
+}
+
+/* --- Modal 3: Delete Product --- */
+.delete-modal-content {
+  .modal-top-handle {
+    width: 42px;
+    height: 4px;
+    background-color: #cbd5e1;
+  }
+
+  .warning-icon-circle {
+    width: 48px;
+    height: 48px;
+    background-color: #fee2e2;
+  }
+
+  .delete-product-preview {
+    background-color: #eff3fb;
+    border: 1px solid #dbe4ff;
+
+    .preview-img-box {
+      width: 60px;
+      height: 60px;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+
+      img {
+        max-height: 48px;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    .stock-tag {
+      color: #00714d;
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+    }
+
+    .price-tag {
+      color: #00714d;
+    }
+  }
+
+  .cancel-delete-btn {
+    border: 1px solid #94a3b8;
+    color: var(--main-color);
+    background-color: #ffffff;
+
+    &:hover {
+      background-color: #eff4ff !important;
+      border-color: var(--main-color);
+      color: var(--main-color);
+    }
+  }
+
+  .confirm-delete-btn {
+    background-color: #b91c1c !important;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #991b1b !important;
+    }
+  }
+
+  .delete-modal-footer {
+    font-size: 0.72rem;
+    color: #94a3b8;
+  }
+}

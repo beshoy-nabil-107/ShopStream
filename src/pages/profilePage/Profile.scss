@@ -1,0 +1,150 @@
+.profile-page {
+  background-color: #fcfcfd;
+  min-height: calc(100vh - 76px);
+
+  /* Left Sidebar */
+  .profile-sidebar {
+    background-color: #f4f6fb;
+
+    .sidebar-btn {
+      background-color: transparent;
+      transition: all 0.2s ease;
+
+      &:hover:not(.active) {
+        background-color: #e8eeff;
+        color: var(--main-color) !important;
+      }
+
+      &.active {
+        background-color: var(--main-color);
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(53, 37, 205, 0.2);
+      }
+    }
+
+    .signout-btn {
+      color: #b91c1c;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  /* User Header Card */
+  .user-header-card {
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+
+    .user-avatar {
+      width: 96px;
+      height: 96px;
+      background-color: #f4f6fb;
+    }
+
+    .badge-premium {
+      background-color: #6cf8bb;
+      color: #00714d;
+      font-size: 0.72rem;
+    }
+
+    .badge-member {
+      background-color: #e2e8f8;
+      color: #475569;
+      font-size: 0.72rem;
+    }
+
+    .header-actions {
+      @media (min-width: 768px) {
+        min-width: 155px;
+      }
+    }
+
+    .analytics-btn {
+      color: var(--main-color);
+      border-color: #cbd5e1;
+
+      &:hover {
+        background-color: #eff4ff !important;
+        border-color: var(--main-color);
+        color: var(--main-color);
+      }
+    }
+  }
+
+  /* Stats Cards */
+  .stat-card {
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+
+    .stat-icon-box {
+      width: 38px;
+      height: 38px;
+
+      &.icon-purple {
+        background-color: #e8eeff;
+      }
+
+      &.icon-green {
+        background-color: #d1fae5;
+      }
+    }
+
+    .stat-tag {
+      color: #00714d;
+      font-size: 0.75rem;
+    }
+  }
+
+  /* Recent Orders Card */
+  .recent-orders-card {
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+
+    .orders-header {
+      background-color: #f8fafc;
+    }
+
+    .order-row:last-child {
+      border-bottom: 0 !important;
+    }
+
+    .order-img-box {
+      width: 58px;
+      height: 58px;
+      background-color: #f4f5f7;
+
+      img {
+        max-height: 46px;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    .status-badge {
+      font-size: 0.7rem;
+
+      &.status-delivered {
+        background-color: #6cf8bb;
+        color: #00714d;
+      }
+
+      &.status-shipped {
+        background-color: var(--main-color);
+        color: #ffffff;
+      }
+
+      &.status-processing {
+        background-color: #e2e8f8;
+        color: #475569;
+      }
+    }
+  }
+}
+
+/* Modal Alert Icon */
+.alert-icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: #e8eeff;
+}

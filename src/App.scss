@@ -1,0 +1,27 @@
+
+:root{
+    --main-color: #3525CD;
+    --input-background: #EFF4FF;
+    --input-border: #C7C4D8;
+}
+
+.main-color {
+    color: var(--main-color)!important;
+}
+.bg-main-color {
+    background-color: var(--main-color)!important;
+
+    &:hover {
+        background-color: #2c1dab !important;
+    }
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+

@@ -1,0 +1,115 @@
+.categories-page {
+  background-color: #fcfcfd;
+  min-height: calc(100vh - 76px);
+
+  /* Hero Section */
+  .categories-hero {
+    background: linear-gradient(135deg, #f4f6fb 0%, #e8eeff 100%);
+    border: 1px solid #e2e8f0;
+
+    .hero-badge {
+      background-color: #6cf8bb;
+      color: #00714d;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+    }
+
+    .hero-subtitle {
+      max-width: 540px;
+      line-height: 1.6;
+    }
+
+    .category-search-box {
+      max-width: 460px;
+      border-color: #cbd5e1 !important;
+
+      &:focus-within {
+        border-color: var(--main-color) !important;
+        box-shadow: 0 0 0 3px rgba(53, 37, 205, 0.1) !important;
+      }
+    }
+  }
+
+  /* Group Filter Tabs */
+  .group-tabs {
+    .group-tab-btn {
+      background-color: #f1f5f9;
+      color: #475569;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: #e2e8f0;
+        color: #0f172a;
+      }
+
+      &.active {
+        background-color: var(--main-color);
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(53, 37, 205, 0.2);
+      }
+    }
+  }
+
+  /* Category Card */
+  .category-card {
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      border-color 0.25s ease;
+
+    .cat-icon-wrapper {
+      width: 52px;
+      height: 52px;
+      background-color: #e8eeff;
+      transition: background-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .cat-badge {
+      background-color: #6cf8bb;
+      color: #00714d;
+      font-size: 0.68rem;
+    }
+
+    .arrow-circle {
+      width: 30px;
+      height: 30px;
+      background-color: #f4f6fb;
+      transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+
+    .skeleton-icon {
+      width: 52px;
+      height: 52px;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: var(--main-color) !important;
+      box-shadow: 0 12px 24px rgba(53, 37, 205, 0.08);
+
+      .cat-icon-wrapper {
+        background-color: var(--main-color);
+        transform: scale(1.05);
+
+        .cat-icon {
+          color: #ffffff !important;
+        }
+      }
+
+      .cat-title {
+        color: var(--main-color) !important;
+      }
+
+      .arrow-circle {
+        background-color: #e8eeff;
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  /* Bottom Banner */
+  .all-products-banner {
+    background-color: #f4f6fb;
+    border: 1px solid #e2e8f0;
+  }
+}

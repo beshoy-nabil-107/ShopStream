@@ -1,0 +1,23 @@
+.admin-gate-page {
+  background-color: #eff3fb;
+
+  .admin-gate-card {
+    max-width: 430px;
+
+    .gate-icon-circle {
+      width: 56px;
+      height: 56px;
+      background-color: #e8eeff;
+    }
+
+    .gate-input-group {
+      background-color: #f4f6fb;
+      border: 1px solid #dbe4ff;
+
+      &:focus-within {
+        background-color: #ffffff;
+        border-color: var(--main-color);
+      }
+    }
+  }
+}

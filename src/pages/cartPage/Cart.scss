@@ -1,0 +1,138 @@
+.cart-page {
+  background-color: #fcfcfd;
+  min-height: calc(100vh - 76px);
+
+  /* --- Empty Cart View --- */
+  &.empty-cart-view {
+    .empty-illustration-wrapper {
+      width: 240px;
+      height: 240px;
+      background-color: #e8eeff;
+
+      .inner-cart-box {
+        width: 155px;
+        height: 155px;
+        background: linear-gradient(145deg, #d8e0e8 0%, #cbd5e1 100%);
+
+      }
+
+      .floating-badge {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+      }
+
+      .badge-top-left {
+        top: 10px;
+        left: 10px;
+        background-color: #6cf8bb;
+      }
+
+      .badge-bottom-right {
+        bottom: 15px;
+        right: 10px;
+        background-color: var(--main-color);
+      }
+    }
+
+    .empty-subtitle {
+      max-width: 440px;
+      line-height: 1.6;
+    }
+
+    .btn-start-shopping,
+    .btn-saved-items {
+      min-width: 170px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-saved-items {
+      color: var(--main-color);
+      border-color: #cbd5e1;
+
+      &:hover {
+        background-color: #eff4ff !important;
+        border-color: var(--main-color);
+        color: var(--main-color);
+      }
+    }
+  }
+
+  /* --- Active Cart Items --- */
+  .cart-item-card {
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: #cbd5e1 !important;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .item-img-wrapper {
+      width: 110px;
+      height: 110px;
+      background-color: #f4f5f7;
+
+      img {
+        max-height: 90px;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    .item-title:hover {
+      color: var(--main-color) !important;
+    }
+
+    .qty-selector {
+      height: 36px;
+      border-color: #e2e8f0 !important;
+
+      button:disabled {
+        opacity: 0.35;
+      }
+    }
+
+    .remove-btn {
+      color: #b91c1c;
+      transition: all 0.2s ease;
+
+
+      &:hover {
+        color: #991b1b;
+        opacity: 0.85;
+
+      }
+    }
+  }
+
+  /* --- Order Summary Card --- */
+  @media (min-width: 992px) {
+    .summary-col {
+      position: sticky;
+      top: 24px;
+    }
+  }
+
+  .order-summary-box {
+    background-color: #f4f6fb;
+    border: 1px solid #e2e8f0;
+
+    .shipping-free {
+      color: #00714d;
+    }
+
+    .terms-text {
+      font-size: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .delivery-info-box {
+      background-color: #eaeff9;
+    }
+  }
+}

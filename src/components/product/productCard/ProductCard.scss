@@ -1,0 +1,128 @@
+.product-card {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &.detailed-card {
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+
+    .img-wrapper {
+      background-color: #f4f5f7;
+    }
+
+    &:hover {
+      border-color: #cbd5e1;
+    }
+  }
+
+  /* Image Wrapper Hover Effect */
+  .img-wrapper {
+    position: relative;
+    border-radius: 12px;
+    overflow: visible !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+
+    .product-img {
+      height: 190px;
+      mix-blend-mode: multiply;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+
+      .product-img {
+        transform: scale(1.05);
+      }
+
+      /* Dynamic shadow appearing under the image wrapper */
+      box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  /* Badges */
+  .badge-custom {
+    top: 10px;
+    padding: 4px 10px;
+    border-radius: 50rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    z-index: 2;
+  }
+
+  .badge-new {
+    left: 10px;
+    background-color: #6cf8bb;
+    color: #00714d;
+  }
+
+  .badge-discount {
+    right: 10px;
+    background-color: #ffdada;
+    color: #b91c1c;
+  }
+
+  /* Typography & Colors */
+  .title-link {
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--main-color) !important;
+    }
+  }
+
+  .star-green {
+    color: #00714d !important;
+    fill: #00714d !important;
+  }
+
+// description clamp
+  .desc-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+    font-size: 0.85rem;
+  }
+
+  .price-green {
+    color: #00714d;
+    line-height: 1.1;
+  }
+
+  .old-price {
+    font-size: 0.78rem;
+  }
+
+  /* Buttons */
+  .cart-btn {
+    background-color: var(--input-background);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: var(--main-color) !important;
+      .cart-icon {
+        fill: white;
+      }
+    }
+  }
+
+  .btn-solid-main {
+    background-color: var(--main-color) !important;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+
+    .cart-icon-white {
+      fill: white !important;
+      color: white !important;
+    }
+
+    &:hover {
+      background-color: #2719a3 !important;
+      transform: scale(1.03);
+    }
+  }
+
+  /* Card general hover */
+  &:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06) !important;
+  }
+}

@@ -1,0 +1,63 @@
+.dashboard-layout {
+  background-color: #f8fafc;
+
+  /* Left Sidebar */
+  .dashboard-sidebar {
+    width: 250px;
+    background-color: #eff3fb;
+    border-right: 1px solid #e2e8f0;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .brand-title {
+      color: var(--main-color) !important;
+      line-height: 1.2;
+    }
+
+    .admin-subtitle {
+      font-size: 0.78rem;
+    }
+
+    /* Navigation Links */
+    .sidebar-link {
+      transition: all 0.2s ease;
+
+      &:hover:not(.active) {
+        background-color: #e2e8f8;
+        color: var(--main-color) !important;
+      }
+
+      &.active {
+        background-color: var(--main-color);
+        color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(53, 37, 205, 0.22);
+      }
+    }
+
+    /* Bottom Admin Card */
+    .admin-profile-card {
+      background-color: #e2e8f8;
+      border: 1px solid #e2e8f0;
+
+      .admin-avatar {
+        width: 40px;
+        height: 40px;
+        background-color: #e2e8f0;
+      }
+
+      .admin-role {
+        font-size: 0.65rem;
+        letter-spacing: 0.04em;
+        color: #6b7280;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
