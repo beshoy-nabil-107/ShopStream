@@ -8,7 +8,7 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import { Navbar as BNavbar, Button, Form, Nav } from "react-bootstrap";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../navbar/Navbar";
 import { appLayoutIcons, SetIcon } from "../../../assets/icons";
 import { useSelector } from "react-redux";
 import "./AppLayout.scss";
