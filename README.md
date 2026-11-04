@@ -2,8 +2,8 @@
 
 **ShopStream** is a full-featured, responsive E-Commerce web application built with **React.js** and **Redux Toolkit**. It combines a sleek customer-facing storefront with a secure, real-time simulated **Admin Panel** for managing inventory, customer carts, and user accounts.
 
-* **GitHub Repository:** [ShopStream Repository](https://github.com/beshoy-nabil-107/ShopStream)
-* **Live Demo:** [View Live Demo](https://[your-demo-url].vercel.app)
+* **GitHub Repository:** [ShopStream Repository](https://github.com/beshoy-nabil-107/ShopStream.git)
+* **Live Demo:** [View Live Demo](https://shop-stream-nine.vercel.app)
 
 ---
 
