@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         {/* Middle Links */}
-        <div className="footer-links d-flex flex-wrap align-items-center gap-4 small fw-medium">
+        <div className="footer-links d-flex flex-wrap align-items-center justify-content-center gap-4 small fw-medium">
           <Link to="#" className="text-decoration-none text-secondary">
             Privacy Policy
           </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         {/* Right Side Icons */}
-        <div className="footer-icons d-flex align-items-center gap-3 text-secondary">
+        <div className="footer-icons d-flex align-items-center gap-3 text-secondary my-2">
           <span className="icon-wrapper" role="button">
             <FiGlobe size={18} />
           </span>

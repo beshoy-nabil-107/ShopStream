@@ -27,6 +27,10 @@ export default function Login() {
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
 
+  // Pre-fill the username and password
+  const [username, setUsername] = useState("emilys");
+  const [password, setPassword] = useState("emilyspass");
+
   // Handle login submit
   async function handleLogin(event) {
     event.preventDefault();
@@ -82,6 +86,8 @@ export default function Login() {
                 id="username"
                 placeholder="name@example.com"
                 className="bg-transparent border-0 shadow-none small py-2"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </InputGroup>
           </Form.Group>
@@ -113,6 +119,8 @@ export default function Login() {
                 id="password"
                 placeholder="••••••••"
                 className="bg-transparent border-0 shadow-none small py-2"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <InputGroup.Text
                 role="button"

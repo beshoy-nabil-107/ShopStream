@@ -27,7 +27,7 @@ import {
   SetIcon,
 } from "../../../assets/icons";
 import "./Inventory.scss";
-
+import defaultProductImg from "../../../assets/images/default-product-image.png";
 const CATEGORIES = [
   "all",
   "smartphones",
@@ -44,8 +44,7 @@ const CATEGORIES = [
   "sunglasses",
 ];
 
-const DEFAULT_IMAGE =
-  "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20AirPods%20Max%20Silver/thumbnail.png";
+const DEFAULT_IMAGE = defaultProductImg;
 
 export default function Inventory() {
   const dispatch = useDispatch();
