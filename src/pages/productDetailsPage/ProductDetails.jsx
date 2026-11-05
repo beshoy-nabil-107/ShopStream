@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchProductById,
@@ -38,6 +38,7 @@ const COLOR_OPTIONS = [
 export default function ProductDetails() {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const go = useNavigate();
 
   // Add to Cart handler for main product
   const handleAddMainProduct = () => {
@@ -89,7 +90,7 @@ export default function ProductDetails() {
 
   if (isLoading) {
     return (
-      <Container className="py-5 my-5 text-center">
+      <Container className="py-5 my-5 text-center min-vh-100">
         <Spinner animation="border" className="main-color" />
       </Container>
     );
@@ -97,7 +98,7 @@ export default function ProductDetails() {
 
   if (error) {
     return (
-      <Container className="py-5">
+      <Container className="py-5 min-vh-100">
         <Alert
           variant="danger"
           className="d-flex align-items-center justify-content-center gap-2 rounded-4"
@@ -358,7 +359,10 @@ export default function ProductDetails() {
               </div>
 
               {/* Buy Now Button */}
-              <Button className="buy-now-btn w-100 border-0 rounded-3 py-2 fw-semibold mb-4">
+              <Button onClick={() => {
+                handleAddMainProduct();
+                go("/checkout");
+              }} className="buy-now-btn w-100 border-0 rounded-3 py-2 fw-semibold mb-4">
                 Buy Now
               </Button>
 
